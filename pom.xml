@@ -7,6 +7,7 @@
     <version>5.3</version>
     <relativePath />
   </parent>
+  <groupId>io.jenkins.plugins</groupId>
   <artifactId>freestyle-project</artifactId>
   <version>1.0</version>
   <packaging>hpi</packaging>
@@ -49,11 +50,6 @@
       <groupId>org.jenkins-ci.plugins</groupId>
       <artifactId>structs</artifactId>
     </dependency>
-    <!--        <dependency>-->
-    <!--            <groupId>org.hamcrest</groupId>-->
-    <!--            <artifactId>hamcrest</artifactId>-->
-    <!--            <scope>test</scope>-->
-    <!--        </dependency>-->
     <dependency>
       <groupId>org.jenkins-ci.main</groupId>
       <artifactId>jenkins-test-harness</artifactId>
@@ -90,23 +86,6 @@
             </configuration>
           </execution>
         </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.openrewrite.maven</groupId>
-        <artifactId>rewrite-maven-plugin</artifactId>
-        <version>5.45.0</version>
-        <configuration>
-          <activeRecipes>
-            <recipe>org.openrewrite.java.migrate.UpgradeToJava17</recipe>
-          </activeRecipes>
-        </configuration>
-        <dependencies>
-          <dependency>
-            <groupId>org.openrewrite.recipe</groupId>
-            <artifactId>rewrite-migrate-java</artifactId>
-            <version>2.29.0</version>
-          </dependency>
-        </dependencies>
       </plugin>
     </plugins>
   </build>
